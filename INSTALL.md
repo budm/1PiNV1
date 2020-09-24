@@ -14,7 +14,7 @@ Install Guide
 - download repo
   - open terminal
   - sudo mkdir /code
-  - git clone https://github.com/DanStach/rpi-goggles
+  - git clone https://github.com/budm/rpi-goggles
 - setup to run python code on startup
   - https://www.dexterindustries.com/howto/run-a-program-on-your-raspberry-pi-at-startup/
   - sudo python3 /code/rpi-goggles/nightvisiongoggles.py &
