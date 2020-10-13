@@ -1,27 +1,34 @@
-# rpi-goggles
-Raspberry Pi night vision goggle code. python code that creates a side by side stero view (steroscopic) from a single camera
-Install instruction can found in the [INSTALL.md](INSTALL.md)
+# 1PiNV1
+## Budget NVD project
 
-## Hardware Ver1:
-- RPi 3b+ 
-- noir camera (arducam B003503)
-  - Resolution: 5MP 2592×1944
-  - Video: 1080p 30 fps, 720p 60fps, 480p 90fps
-- desktop monitor HDMI (1600x900)
+### software forked from rpi-goggles, case designed by me, name inspired by the 1PN51
 
-## Hardware Ver2:
-- RPi 3b+
-- noir camera (arducam B003503)
-  - Resolution: 5MP 2592×1944
-  - Video: 1080p 30 fps, 720p 60fps, 480p 90fps
-- 3.5 Inch HDMI (UCTRONICS)(480*320)
+## this readme is a work in progress, as I am still populating it with my files for this project.
 
-## Hardware Ver3:
-- RPi 0W
-- noir camera (arducam B003503)
-  - Resolution: 5MP 2592×1944
-  - Video: 1080p 30 fps, 720p 60fps, 480p 90fps
--  7 Inch HDMI (MakerFocus)(800x480)
+A night-vision device (NVD), also known as night optical/observation device (NOD) and night-vision goggles (NVG), is an optoelectronic device that allows images to be produced in levels of light approaching total darkness.
+
+Your average helmet mount NVD is priced out of reach for the average individual, so this project is a test to attempt to create an affordable helmet mounted NVD for the average individual or the curious tinkerer.
+
+## Hardware Ver1 (current test):
+### - RPi 3 
+### - noir camera (arducam B003503)
+### - 3.5 Inch HDMI (UCTRONICS)(480*320)
+### - 1 Ximimark Micro USB 18650 battery expansion shield + battery, uncased
+### - My pi case design, but no helmet mount
+
+## Ver2 will consist of:
+- 2x RPi 0W
+- 2x noir camera (arducam B003503)
+- 2x 3.5 Inch HDMI (UCTRONICS)(480*320)
+- 2x Ximimark Micro USB 18650 battery expansion shield + batteries, no enclosure
+- the complete pi case design and the helmet mount
+
+## Ver3 is expected to be:
+- 2x RPi 0W
+- 2x noir camera (arducam B003503)
+- 2x 3.5 Inch HDMI (UCTRONICS)(480*320)
+- 2x Ximimark Micro USB 18650 battery expansion shield + batteries
+- the complete pi case design, battery enclosure, and the helmet mount, all mounted to a helmet for testing
 
 ## Notes:
 - test: RPi 3b+ (1-5% cpu usage)
@@ -29,11 +36,5 @@ Install instruction can found in the [INSTALL.md](INSTALL.md)
 - Display is HDMI (there seems to be lag issues when using Display Connector DSI, or GPIO)
 
 ## Reference
-- orginal code found at https://www.raspberrypi.org/forums/viewtopic.php?t=187070
-- other youtube link: https://www.youtube.com/watch?v=JdtEr_CbDv0
+- forked from: https://github.com/DanStach/rpi-goggles
 
-## usefull commands
-- sudo python3 /code/rpi-goggles/nightvisiongoggles.py
-- sudo raspivid -t 800000000
-- stop command: sudo pkill -9 python
-- stop command: sudo pkill -9 raspivid
