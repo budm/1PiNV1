@@ -3,14 +3,14 @@ from signal import pause
 
 # define values from the camera window
 #my desktop 1600x900 (800x450)
-camResW = 200
-camResH = 225
-camFramR = 30
+camResW = 800
+camResH = 450
+camFramR = 60
 
 # starting corner of your windows (upper-left position) 
-cornerX = 500
-cornerY = 600
-windowSpacer = 10 # space between the 2 windows
+cornerX = 0
+cornerY = 0
+windowSpacer = 0 # space between the 2 windows
 
 camera = mo.MMALCamera()
 splitter = mo.MMALSplitter()
@@ -24,7 +24,7 @@ camera.outputs[0].commit()
 
 p = render_l.inputs[0].params[mmal.MMAL_PARAMETER_DISPLAYREGION]
 p.set = mmal.MMAL_DISPLAY_SET_FULLSCREEN | mmal.MMAL_DISPLAY_SET_DEST_RECT
-p.fullscreen = False
+p.fullscreen = True
 # These parameters control the X,Y and scale of the left image showing up on your display
 p.dest_rect = mmal.MMAL_RECT_T(cornerX, cornerY, camResW, camResH)
 render_l.inputs[0].params[mmal.MMAL_PARAMETER_DISPLAYREGION] = p
@@ -38,6 +38,6 @@ render_r.connect(splitter.outputs[1])
 
 splitter.enable()
 render_l.enable()
-render_r.enable()
+#render_r.enable()
 
 pause()
