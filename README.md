@@ -9,6 +9,8 @@ A night-vision device (NVD), also known as night optical/observation device (NOD
 
 Your average helmet mount NVD is priced out of reach for the average individual, so this project is a test to attempt to create an affordable helmet mounted NVD for the average individual or the curious tinkerer.
 
+Case files listed as 2x need to be printed twice, and everything else only needs to be printed once.
+
 ## Hardware Ver1 (current test):
 ### - RPi 3 
 ### - noir camera (arducam B003503)
